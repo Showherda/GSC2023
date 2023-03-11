@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.website{
+    height: 100%;
+    width: 100%;
+    background: url(images/background.png) no-repeat ;
+    
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+
+}
+
+h6{
+    font-size: 1em;
+    color: #BEDE61;
+    text-align: center;
+
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+.form-box{
+    width: 380px;
+    height: 500px;
+    position: relative;
+    margin: 6% auto;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 17px;
+    background: transparent;
+    background: linear-gradient(180deg, #30312D 0%, rgba(48,49,45,0)100%);
+    filter: drop-shadow(0px 100px 80px rgba(129, 216, 241, 0.07)) drop-shadow(0px 12.5216px 10.0172px rgba(129, 216, 241, 0.035));
+}
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #4e5d47;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #BEDE61, #c7dc07);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    color: white;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    outline: none;
+    text-decoration-color: white;
+    background: transparent;
+}
+
+.submit-btn{
+    
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,  #BEDE61, #c7dc07);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+
+span{
+    color: white;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login{
+    left: 50px;
+}
+#signup{
+    left: 450px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+/* NGO html  */
+.container, body{
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+    --nav--height: 50px;
+    padding-top: var(--nav--height);
+}
+.ngo-title, h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-style: initial;
+    
+}
+
+.card{
+    width: 90%;
+    max-width: 400px;
+    padding: 5rem 2.5rem;
+
+    border-radius: 1rem;
+    border: 1px solid transparent;
+
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+
+    border-top-color: rgba(225,225,225,0.5);
+    border-bottom-color: rgba(225,225,225,0.1);
+    border-left-color: rgba(225,225,225,0.5);
+    border-right-color: rgba(225,225,225,0.1);
+}
+
+.cb1{
+    background-color: rgba(225,225,225,0.1);
+}
+
+.ngo-name{
+    color: rgba(225,225,225,0.08);
+    font-size: 1.5rem;
+    z-index: -1;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+.card-btn{
+    border-radius: 0.5rem;
+    background-color:#BDDD60;
+    color: black;
+}
+
+.card-btn:hover{
+    box-shadow: 0 0.3rem rgba(0, 0, 0, 0.3) ;
+}
+
+.card-title{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 40rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.card-text{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: rgb(229, 220, 220);
+}
+
+.nav-bar{
+    width: 100%;
+    height: var(--nav--height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #30312D ;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav--link{
+    text-align: center;
+    color: white;
+    text-decoration:none;
+    margin: 0 1em;
+    font-weight: lighter;
+}
+
+.nav--hidden{
+    transform: translateY(calc(-1 * var(--nav--height)));
+    box-shadow: none;
+}
