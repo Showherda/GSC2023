@@ -1,0 +1,65 @@
+<html>
+
+
+<head>
+    <title>EndangAID</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="website">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Signup</button>
+            </div>
+            <div id="logo-img" class="loimg" >
+                <img src="images/logo.png" alt="logo" class="center">
+            </div>
+            <form id="login" class="input-group" action="NGO.html">
+                <h6>Log in</h6>
+                <input type="text" class="input-field" placeholder="Email/Username" required>
+                <input type="text" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password <a href="#"> Forgot Password?</a></span>
+                <button type="submit" class="submit-btn">Log In</button>
+                                
+            </form>
+            <form id="signup" class="input-group">
+                <h6>Sign up</h6>
+                <input type="text" class="input-field" placeholder="First name" required>
+                <input type="text" class="input-field" placeholder="Last name" required>
+                <input type="text" class="input-field" placeholder="Email/Username" required>
+                <input type="text" class="input-field" placeholder="Password" required>
+                
+                <button type="submit" class="submit-btn">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        var x =document.getElementById("login");
+        var y = document.getElementById("signup");
+        var z = document.getElementById("btn");
+
+        function signup(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
