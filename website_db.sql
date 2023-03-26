@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2023 at 12:14 PM
+-- Generation Time: Mar 26, 2023 at 10:35 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -30,6 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `area` (
   `area_id` int(11) NOT NULL,
   `name` varchar(60) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `area_species`
+--
+
+CREATE TABLE `area_species` (
+  `area_id` int(11) DEFAULT NULL,
+  `species_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -128,7 +139,7 @@ CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `first_name` varchar(60) DEFAULT NULL,
   `last_name` varchar(60) DEFAULT NULL,
-  `password_hash` varchar(70) DEFAULT NULL
+  `password_hash` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -140,6 +151,13 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `area`
   ADD PRIMARY KEY (`area_id`);
+
+--
+-- Indexes for table `area_species`
+--
+ALTER TABLE `area_species`
+  ADD KEY `area_id` (`area_id`),
+  ADD KEY `species_id` (`species_id`);
 
 --
 -- Indexes for table `award`
@@ -200,6 +218,13 @@ ALTER TABLE `user`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `area_species`
+--
+ALTER TABLE `area_species`
+  ADD CONSTRAINT `area_species_ibfk_1` FOREIGN KEY (`area_id`) REFERENCES `area` (`area_id`),
+  ADD CONSTRAINT `area_species_ibfk_2` FOREIGN KEY (`species_id`) REFERENCES `species` (`species_id`);
 
 --
 -- Constraints for table `award`
